@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TasksController;
+use App\Http\Controllers\SocialShareButtonsController;
 
 
 /*
@@ -14,6 +15,7 @@ use App\Http\Controllers\TasksController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/social-media-share', [SocialShareButtonsController::class,'ShareWidget']);
 
 Route::get('/', function () {
     return view('welcome');

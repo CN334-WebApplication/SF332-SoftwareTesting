@@ -77,7 +77,7 @@
             .sp1{font-size:6.3rem;}
             .poppins{font-family: 'Poppins', sans-serif; color: #fff; text-align: center;padding: 0px 5px;border-radius: 12px;opacity: 0.5;}
             /* .white-txt{--text-opacity:1;color:#fff} */
-            
+             
             
         </style>
 
@@ -88,6 +88,7 @@
         </style> -->
     </head>
     <body class="antialiased">
+
 
         
 

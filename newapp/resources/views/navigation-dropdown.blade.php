@@ -21,7 +21,7 @@
                 </li>
                 <div style="width: 100%; margin-top: 10px">
                 <a href="https://www.facebook.com/sharer.php?u=http://127.0.0.1:8000/dashboard"id="shareFB" ><img style="margin-left:35px" src="images/facebook.png" alt="facebook" width="50" height="50"></a>
-                <a href="https://twitter.com/compose/tweet" id="shareTW"><img style="margin-left:35px" src="images/twitter.png" alt="twitter" width="50" height="50"></a>
+                <a href="https://twitter.com/share?url=" id="shareTW"><img style="margin-left:35px" src="images/twitter.png" alt="twitter" width="50" height="50"></a>
             </div>
             </div>
 
@@ -115,5 +115,6 @@
                 @endif
             </div>
         </div>
+        
     </div>
 </div>
