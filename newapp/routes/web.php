@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TasksController;
 use App\Http\Controllers\SocialShareButtonsController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +14,17 @@ use App\Http\Controllers\SocialShareButtonsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/social-media-share', [SocialShareButtonsController::class,'ShareWidget']);
 
-Route::get('/', function () {
+
+Route::get('/',[SocialShareButtonsController::class,'index'], function () {
     return view('welcome');
 });
+// Route::get('/', );
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('/dashboard',[TasksController::class, 'index'])->name('dashboard');
+
+    Route::get('/navigation-dropdown',[SocialShareButtonsController::class,'index']);
 
     Route::get('/task',[TasksController::class, 'add']);
     Route::post('/task',[TasksController::class, 'create']);

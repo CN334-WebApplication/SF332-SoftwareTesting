@@ -12,6 +12,7 @@ class TasksController extends Controller
         $tasks = auth()->user()->tasks();
         return view('dashboard', compact('tasks'));
     }
+
     public function add()
     {
     	return view('add');
@@ -70,4 +71,13 @@ class TasksController extends Controller
 	    	return redirect('/dashboard'); 
     	}    	
     }
+
+    // public function social(){
+    //     $socialShare = Share::page('http://127.0.0.1:8000','todo list')
+    //     ->facebook()
+    //     ->twitter()->getRawLinks();
+    //     // dd($socialShare);
+    //     return view('dashboard', compact('socialShare'));
+    // }
+
 }

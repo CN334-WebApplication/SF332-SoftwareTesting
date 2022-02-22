@@ -115,6 +115,13 @@
                         TODO LIST
                     </div>
                 </div>
+                <ul style="display: flex; justify-content: center; padding: 0px;" class="inline-block">
+                    @foreach($socialShare ?? '' as $key => $value)
+                        <li style = "list-style-type: none; ">
+                            <a href="{{$value}}" target="_blank">{{ucfirst($key)}}&nbsp;&nbsp;</a>
+                        </li>
+                    @endforeach
+                </ul>
                 <div class="flex justify-center setsize py-center">
                     <!-- <img src="{{ URL('images/icon2.png') }}" alt=""> -->
                 </div>

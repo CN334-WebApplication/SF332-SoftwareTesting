@@ -1,18 +1,18 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+use Share;
+
 class SocialShareButtonsController extends Controller
-{
-    public function ShareWidget()
-    {
-        $shareComponent = \Share::page(
-            'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
-            'Your share text comes here',
-        )
+{   
+    public function index(){
+        $socialShare = Share::page('http://127.0.0.1:8000','todo list')
         ->facebook()
-        ->twitter();
-        
-        return view('posts', compact('shareComponent'));
+        ->twitter()->getRawLinks();
+        // dd($socialShare);
+        return view('welcome', compact('socialShare'));
     }
     
 }
